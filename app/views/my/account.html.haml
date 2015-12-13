@@ -1,0 +1,17 @@
+- set_html_title(icon: 'fa-user')
+
+%h1.page-header= label_with_icon t('.title'), 'fa-user', bigger: false, fixed: true
+
+%p= link_to label_with_icon(t('.change_password'), 'fa-lock', fixed: true), edit_user_registration_path
+
+= dci_form_for @user, url: my_account_path, label_col: 'col-sm-3 col-md-2 col-lg-2', control_col: 'col-sm-5 col-md-4 col-lg-3' do |f|
+
+  = f.text_field  :first_name, required: true
+  = f.text_field  :last_name,  required: true
+  = f.text_field  :email,      required: true
+  = f.select      :language, available_locales
+  = f.select      :theme, available_themes
+  = f.time_zone_select :time_zone, nil, { default: 'Paris' }
+
+  = f.form_group control_col: 'col-sm-3 col-sm-offset-3 col-md-offset-2' do
+    = f.success

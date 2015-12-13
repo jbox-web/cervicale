@@ -1,0 +1,28 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+*/
+
+.nav.navbar-right > .active > a,
+.nav.navbar-left  > .active > a,
+.nav.navbar-right > .active > a:hover,
+.nav.navbar-left  > .active > a:hover,
+.nav.navbar-right > .active > a:focus,
+.nav.navbar-left  > .active > a:focus {
+  background-color: #eee;
+}
+
+.navmenu-nav > .active > a,
+.navmenu-nav > .active > a:hover,
+.navmenu-nav > .active > a:focus {
+  background-color: #eee;
+}
+
+.navbar-top-links .dropdown-menu li.dropdown-header a {
+  font-weight: bold;
+  font-size: 13px;
+}

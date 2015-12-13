@@ -1,0 +1,18 @@
+!!! 5
+%html{ lang: page_lang }
+  %head= render 'layouts/head'
+
+  %body{ data: { controller: controller.controller_path, action: controller.action_name } }
+
+    #wrapper
+      = render 'layouts/topbar'
+
+      #page-wrapper
+        .row
+          .col-lg-12
+            .flash-messages= render_flashes
+            = yield
+
+      #modal-holder
+
+      #context-menu{ style: 'display: none;' }

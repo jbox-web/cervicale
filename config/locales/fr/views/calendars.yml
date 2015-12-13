@@ -1,0 +1,27 @@
+fr:
+
+  calendars:
+    index:
+      title: Calendriers
+      my_calendars: Mes calendriers
+      my_memberships: Mes calendriers partagés
+    my_calendars:
+      none_defined: Aucun calendrier trouvé
+    my_memberships:
+      none_defined: Aucun calendrier trouvé
+    new:
+      title: Nouveau calendrier
+    edit:
+      title: Modifier le calendrier
+    form:
+      add_member: Ajouter un membre
+    create:
+      notice: Calendrier créé avec succès
+    update:
+      notice: Calendrier modifié avec succès
+    destroy:
+      notice: Calendrier supprimé avec succès
+    show:
+      title: Calendrier
+      events: Evénements
+      add_event: Nouvel événement

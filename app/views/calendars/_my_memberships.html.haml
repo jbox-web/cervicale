@@ -1,0 +1,34 @@
+- unless smart_listing.empty?
+
+  - smart_listing.collection.group_by(&:owner).each do |owner, collection|
+    %fieldset
+      %legend= owner
+      %table{ class: 'table table-hover' }
+        %thead
+          %tr
+            %th= Calendar.human_attribute_name('name')
+            %th= Calendar.human_attribute_name('description')
+            %th= Calendar.human_attribute_name('url')
+            %th= Calendar.human_attribute_name('color')
+            %th= Calendar.human_attribute_name('permissions')
+            %th= Calendar.human_attribute_name('members')
+
+        %tbody
+          - collection.each do |calendar|
+            %tr
+              %td{ class: 'vert-align' }= link_to calendar.name, user_calendar_path(calendar.owner, calendar)
+              %td{ class: 'vert-align' }= calendar.description
+              %td{ class: 'vert-align' }= render_calendar_url(calendar)
+              %td{ class: 'vert-align' }= render_color(calendar.color)
+              %td{ class: 'vert-align' }= label_with_success_tag calendar.permissions_for(User.current)
+              %td{ class: 'vert-align' }
+                = html_list do
+                  - calendar.members.each do |member|
+                    %li= member
+
+      = smart_listing.paginate
+      = smart_listing.pagination_per_page_links
+
+- else
+
+  = render_no_data

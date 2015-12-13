@@ -1,0 +1,44 @@
+fr:
+
+  activerecord:
+    models:
+      event_collection:
+        one: Evénement
+        other: Evénements
+
+    attributes:
+      event_collection:
+        title: Titre
+        description: Description
+        location: Lieu
+        color: Couleur
+        category_list: Catégories
+        start_time: Date de début
+        end_time: Date de fin
+        all_day: Evénement sur toute la journée?
+        repetition: Répétition
+        frequency: Fréquence
+        repeat_until: Jusqu'à
+        created_at: Créé le
+        updated_at: Modifé le
+
+    errors:
+      models:
+        event_collection:
+          attributes:
+            base:
+              invalid: La date de début doit être inférieure à la date de fin
+            title:
+              blank: ne peut être vide
+            description:
+              blank: ne peut être vide
+            start_time:
+              blank: ne peut être vide
+            end_time:
+              blank: ne peut être vide
+            repetition:
+              blank: ne peut être vide
+            frequency:
+              blank: ne peut être vide
+            repeat_until:
+              blank: ne peut être vide

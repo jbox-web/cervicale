@@ -1,0 +1,40 @@
+- unless smart_listing.empty?
+
+  %table{ class: 'table table-hover' }
+    %thead
+      %tr
+        %th= Event.human_attribute_name('title')
+        %th= Event.human_attribute_name('start_time')
+        %th= Event.human_attribute_name('author')
+        %th= Event.human_attribute_name('visibility')
+        %th= Event.human_attribute_name('location')
+        %th= Event.human_attribute_name('category_list')
+        %th
+
+    %tbody
+      - smart_listing.collection.each do |event|
+        - if policy(event).visible?
+          %tr
+            %td
+              - if policy(event.eventable).add_event?
+                = link_to_edit polymorphic_path([event.eventable.owner, event.eventable, event], action: :edit), { label: event.title, modal: true }, { icon: false }
+              - elsif policy(event).details_visible?
+                = event.title
+              .pull-right= render_color(event.color)
+            %td= l event.start_time
+            %td= event.author
+            %td= render_visibility(event)
+            %td= event.location
+            %td
+              - if policy(event).details_visible?
+                = html_list do
+                  - event.category_list.each do |tag|
+                    %li= tag
+            %td= link_to_delete polymorphic_path([event.eventable.owner, event.eventable, event]), { label: false, remote: true } if policy(event.eventable).add_event?
+
+  = smart_listing.paginate
+  = smart_listing.pagination_per_page_links
+
+- else
+
+  = render_no_data

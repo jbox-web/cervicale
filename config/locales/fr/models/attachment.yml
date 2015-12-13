@@ -1,0 +1,18 @@
+fr:
+
+  activerecord:
+    models:
+      event_attachment:
+        one: Pièce jointe
+        other: Pièces jointes
+
+    attributes:
+      event_attachment:
+        url: URL
+
+    errors:
+      models:
+        event_attachment:
+          attributes:
+            url:
+              blank: ne peut être vide

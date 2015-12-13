@@ -1,0 +1,17 @@
+- html_title t('.title')
+
+.container-fluid
+  .row-fluid
+    %div{ class: 'col-sm-5 col-sm-offset-4 col-md-4 col-md-offset-4' }
+
+      %h3{ class: 'page-header' }= label_with_icon(t('.title'), 'fa-lock', fixed: true, bigger: false)
+
+      = bootstrap_form_for resource,
+                           as:   resource_name,
+                           url:  password_path(resource_name),
+                           html: { method: :put } do |f|
+
+        = f.hidden_field :reset_password_token
+        = f.password_field :password, autofocus: true, autocomplete: 'off'
+        = f.password_field :password_confirmation, autocomplete: 'off'
+        = f.submit t('.change_password'), class: 'btn btn-primary'

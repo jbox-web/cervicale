@@ -1,0 +1,32 @@
+- unless smart_listing.empty?
+
+  %table{ class: 'table table-hover' }
+    %thead
+      %tr
+        %th= Calendar.human_attribute_name('name')
+        %th= Calendar.human_attribute_name('description')
+        %th= Calendar.human_attribute_name('url')
+        %th.text-center= Calendar.human_attribute_name('color')
+        %th= Calendar.human_attribute_name('members')
+        %th{ colspan: 2 }
+
+    %tbody
+      - smart_listing.collection.each do |calendar|
+        %tr
+          %td.vert-align= link_to calendar.name, user_calendar_path(calendar.owner, calendar)
+          %td.vert-align= calendar.description
+          %td.vert-align= render_calendar_url(calendar)
+          %td.vert-align.text-center= render_color(calendar.color)
+          %td.vert-align
+            = html_list do
+              - calendar.members.each do |member|
+                %li= member
+          %td.vert-align= link_to_edit edit_user_calendar_path(calendar.owner, calendar), { label: false , modal: true }, { bigger: false, aligned: false } if policy(calendar).edit?
+          %td.vert-align= link_to_delete user_calendar_path(calendar.owner, calendar), { label: false, remote: true }, { bigger: false, aligned: false } if policy(calendar).destroy?
+
+  = smart_listing.paginate
+  = smart_listing.pagination_per_page_links
+
+- else
+
+  = render_no_data

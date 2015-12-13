@@ -1,0 +1,24 @@
+fr:
+
+  activerecord:
+    models:
+      calendar:
+        one: Calendrier
+        other: Calendriers
+
+    attributes:
+      calendar:
+        name: Nom
+        description: Description
+        color: Couleur
+        owner_id: Propriétaire
+        members: Membres
+
+    errors:
+      models:
+        calendar:
+          attributes:
+            name:
+              blank: ne peut être vide
+            owner_id:
+              blank: ne peut être vide

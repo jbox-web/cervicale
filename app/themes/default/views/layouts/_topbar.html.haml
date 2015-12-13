@@ -1,0 +1,9 @@
+= navbar container: false, static: :top do
+  = navbar_header brand: t('application_name'), brand_link: '/'
+  = render_topbar_right_menu
+  = render_topbar_left_menu
+
+  .navbar-default.sidebar{ role: 'navigation' }
+    = navbar_collapse do
+      = render_sidebar_menu_top
+      = render_sidebar_menu_bottom

@@ -1,0 +1,23 @@
+.panel{ class: 'panel-default' }
+  .panel-heading= label
+  .panel-body
+    .table-responsive
+      %table{ class: 'table table-hover' }
+        %thead
+          %tr
+            %th= User.human_attribute_name('full_name')
+            %th= User.human_attribute_name('email')
+            - if render_admin
+              %th= User.human_attribute_name('admin')
+            %th= User.human_attribute_name('last_connection')
+            %th
+
+        %tbody
+          - users.each do |user|
+            %tr
+              %td= link_to user.full_name, edit_admin_user_path(user)
+              %td= mail_to user.email
+              - if render_admin
+                %td= bool_to_icon user.admin?
+              %td= user.last_connection
+              %td= link_to_delete admin_user_path(user), { class: 'btn-sm', button: true, label: false }, { bigger: true } unless user.first_admin?

@@ -1,0 +1,24 @@
+- set_html_title(icon: 'fa-users')
+
+= render_breadcrumbs(tag: :h1, tag_opts: { class: 'page-header' }, crumb_opts: { ul_class: 'breadcrumb breadcrumb-without-background' })
+
+%p= link_to label_with_icon(t('.change_password'), 'fa-lock', fixed: true), change_password_admin_user_path unless object.new_record?
+
+= dci_form_for object, url: url, label_col: 'col-sm-3 col-lg-2', control_col: 'col-sm-5 col-md-4 col-lg-3' do |f|
+
+  = f.text_field  :first_name, required: true
+  = f.text_field  :last_name,  required: true
+  = f.email_field :email,      required: true
+  = f.select      :language,   available_locales, selected: I18n.default_locale
+  = f.time_zone_select :time_zone, nil, { default: 'Paris' }
+
+  - unless object.first_admin?
+    = f.switch :admin,   data: { size: 'small' }
+    = f.switch :enabled, data: { size: 'small' }
+
+  - if object.new_record?
+    = render 'change_password_fields', f: f
+
+  = f.form_group do
+    = f.success
+    = f.cancel admin_users_path

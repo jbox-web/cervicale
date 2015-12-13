@@ -1,0 +1,6 @@
+---
+:weekends: true
+:business_hours: {}
+:min_time: '00:00:00'
+:max_time: '24:00:00'
+:height:   600

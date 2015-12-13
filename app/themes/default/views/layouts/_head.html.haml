@@ -1,0 +1,15 @@
+%meta{ charset: 'utf-8' }
+%meta{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
+%title= yield :title
+= csrf_meta_tags
+= google_webfonts_init({ google: EasyAPP::Theme.site_fonts })
+= stylesheet_link_tag 'default/all', :media => 'all', 'data-turbolinks-track' => true
+= stylesheet_link_tag 'application', :media => 'all', 'data-turbolinks-track' => true
+= javascript_include_tag 'application', 'data-turbolinks-track' => true
+= javascript_include_tag 'default/all', 'data-turbolinks-track' => true
+= yield :header_tags
+
+<!--[if lt IE 9]>
+= javascript_include_tag 'html5shiv'
+= javascript_include_tag 'respond'
+<![endif]-->

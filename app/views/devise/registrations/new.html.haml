@@ -1,0 +1,19 @@
+- html_title t('.signup')
+
+.container-fluid
+  .row-fluid
+    %div{ class: 'col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-4' }
+
+      %h3{ class: 'page-header' }= label_with_icon(t('.signup'), 'fa-edit', fixed: true)
+
+      = bootstrap_form_for resource,
+                           url:    registration_path(resource_name),
+                           html:   { method: :post } do |f|
+
+        = f.text_field :first_name, autofocus: true
+        = f.text_field :last_name
+        = f.email_field :email
+        = f.password_field :password, autocomplete: "off"
+        = f.password_field :password_confirmation, autocomplete: "off"
+
+        = f.success t('text.signup')

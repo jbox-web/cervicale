@@ -1,0 +1,66 @@
+fr:
+
+  activerecord:
+    models:
+      user:
+        one: Utilisateur
+        other: Utilisateurs
+
+    attributes:
+      user:
+        first_name: Prénom
+        last_name: Nom
+        full_name: Nom complet
+        email: Adresse email
+        current_password: Mot de passe actuel
+        password: Mot de passe
+        password_confirmation: Confirmation du mot de passe
+        admin: Administrateur
+        anonymous: Anonyme
+        time_zone: Fuseau horaire
+        language: Langue
+        remember_me: Se souvenir de moi
+        create_options: Options du mot de passe
+        send_by_mail: Envoyer les informations à l'utilisateur par mail
+        last_connection: Dernière connexion
+        never_connected: Jamais connecté
+        enabled: Compte actif
+        disabled: Compte inactif
+        generate_password: Générer un mot de passe
+        specify_password: Spécifier un mot de passe
+        status: Status
+        theme: Thème
+
+    errors:
+      models:
+        user:
+          attributes:
+            first_name:
+              blank: ne peut être nul
+              too_long: trop long
+            last_name:
+              blank: ne peut être nul
+              too_long: trop long
+            full_name:
+              blank: ne peut être nul
+              too_long: trop long
+            email:
+              blank: ne peut être nul
+              invalid: invalide
+              taken: déjà utilisé
+              not_found: adresse email inconnue
+            current_password:
+              invalid: invalide
+              blank: ne peut être nul
+            password:
+              blank: ne peut être nul
+              too_short: trop court
+              confirmation: ne correspond pas
+            password_confirmation:
+              confirmation: ne correspond pas
+            time_zone:
+              blank: ne peut être nul
+            language:
+              blank: ne peut être nul
+            create_options:
+              blank: ne peut être nul

@@ -1,0 +1,8 @@
+- set_html_title(icon: 'fa-users')
+
+- add_crumb link_to_add(new_admin_user_path, { label: false }, { bigger: false })
+= render_breadcrumbs(tag: :h1, tag_opts: { class: 'page-header' }, crumb_opts: { ul_class: 'breadcrumb breadcrumb-without-background' })
+
+= render 'admin/users/user', users: @users.active.admin.order_by_full_name,     label: label_with_icon(t('.admins'), 'fa-star'),     render_admin: false
+= render 'admin/users/user', users: @users.active.non_admin.order_by_full_name, label: label_with_icon(t('.non_admins'), 'fa-user'), render_admin: false
+= render 'admin/users/user', users: @users.locked.order_by_full_name,           label: label_with_icon(t('.disabled'), 'fa-lock'),   render_admin: true

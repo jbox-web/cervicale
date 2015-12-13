@@ -1,0 +1,50 @@
+- set_html_title(icon: 'fa-users')
+
+.row
+
+  .col-md-6
+
+    .row
+
+      .col-md-12
+        = render_breadcrumbs(tag: :h2, tag_opts: { class: 'page-header' }, crumb_opts: { ul_class: 'breadcrumb breadcrumb-without-background' })
+
+        %dl{ class: 'dl-horizontal' }
+
+          %dt= Calendar.human_attribute_name('url') + ' :'
+          %dd= render_calendar_url(@calendar)
+
+          %dt= Calendar.human_attribute_name('owner_id')
+          %dd= @calendar.owner
+
+          %dt= Calendar.human_attribute_name('description')
+          %dd= @calendar.description
+
+          %dt= Calendar.human_attribute_name('members')
+          %dd
+            = html_list do
+              - @calendar.members.each do |member|
+                %li= member
+
+      .col-md-12
+        %h2.page-header
+          .pull-left= label_with_icon t('.events'), 'fa-bullhorn', bigger: false
+          %small.pull-right{ style: 'margin-top: 10px;' }
+            - if policy(@calendar).add_event?
+              = link_to_add 'javascript:void(0);', { label: false, id: 'create_event', data: { calendar: '#calendar' } }
+            = link_to_add user_calendar_path(@user, @calendar), { label: false, remote: true }, { icon: 'fa-refresh' }
+
+          .clearfix
+
+        = smart_listing_render(:events)
+
+  .col-md-6
+    = render_full_calendar id: 'calendar',
+                           editable: policy(@calendar).add_event?,
+                           new_event_url: polymorphic_path([@calendar.owner, @calendar, Event], action: :new),
+                           events: polymorphic_path([@calendar.owner, @calendar, Event], format: :json),
+                           lang: User.current.language
+
+
+:coffee
+  FullCalendar.create('#calendar')

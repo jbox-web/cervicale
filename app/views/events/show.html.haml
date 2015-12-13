@@ -1,0 +1,40 @@
+- set_html_title(icon: 'fa-bullhorn')
+
+%dl.dl-horizontal
+
+  - if event.confidential?
+
+    %dt= Event.human_attribute_name('author') + ' :'
+    %dd= event.author
+
+    %dt= Event.human_attribute_name('start_time') + ' :'
+    %dd= l event.start_time
+
+    %dt= Event.human_attribute_name('end_time') + ' :'
+    %dd= l event.end_time
+
+    %dt= Event.human_attribute_name('all_day') + ' :'
+    %dd= bool_to_icon event.all_day?
+
+  - elsif event.public?
+
+    %dt= Event.human_attribute_name('author') + ' :'
+    %dd= event.author
+
+    %dt= Event.human_attribute_name('title') + ' :'
+    %dd= event.title
+
+    %dt= Event.human_attribute_name('location') + ' :'
+    %dd= event.location
+
+    %dt= Event.human_attribute_name('description') + ' :'
+    %dd= event.description
+
+    %dt= Event.human_attribute_name('start_time') + ' :'
+    %dd= l event.start_time
+
+    %dt= Event.human_attribute_name('end_time') + ' :'
+    %dd= l event.end_time
+
+    %dt= Event.human_attribute_name('all_day') + ' :'
+    %dd= bool_to_icon event.all_day?

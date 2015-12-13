@@ -1,0 +1,50 @@
+- set_html_title(icon: 'fa-bullhorn')
+
+= render_breadcrumbs(tag: :h1, tag_opts: { class: 'page-header' }, crumb_opts: { ul_class: 'breadcrumb breadcrumb-without-background' })
+
+= dci_form_for [eventable.owner, eventable, event], nested: true, html: { id: 'event_form' }, label_col: 'col-sm-3 col-lg-2', control_col: 'col-sm-5 col-md-4 col-lg-3' do |f|
+
+  = f.errors_on  :base
+
+  = f.text_field      :title,       required: false
+  = f.text_field      :location,    required: false
+  = f.text_area       :description, required: false
+  = f.datetime_picker :start_time,  { required: true, value: l(f.object.start_time, format: :default) }, { lang: User.current.language }
+  = f.datetime_picker :end_time,    { required: true, value: l(f.object.end_time, format: :default) }, { lang: User.current.language }
+  = f.switch          :all_day,     data: { size: 'small' }
+  = f.text_field      :color
+  = f.text_field      :category_list, 'data-role' => 'tagsinput', value: f.object.category_list.join(',')
+  = f.select          :visibility, Event.available_visibility_options, prompt: true
+
+  - if event.event_collection
+    = f.select :update_options, Event.available_update_options, prompt: true
+
+  = f.form_group do
+    %table{ class: 'table table-hover', id: 'attachments_list' }
+      %thead
+        %tr
+          %th= get_model_name_for('EventAttachment')
+          %th= f.link_to_add label_with_icon(t('.add_attachment'), 'fa-plus', fixed: true), :event_attachments, data: { target: "#attachments_list" }
+
+      %tbody
+        = f.fields_for :event_attachments, wrapper: false do |ff|
+          %tr{ class: 'fields' }
+            %td{ class: 'vert-align' }= ff.text_field :url, hide_label: true, control_col: 'col-md-12', placeholder: 'http://'
+            %td{ class: 'vert-align' }= ff.link_to_remove icon('fa-trash-o')
+
+  = f.form_group do
+    = f.success nil, data: { disable_with: t('text.save_in_progress') }
+    = link_to_delete polymorphic_path([event.eventable.owner, event.eventable, event], delete_options: 'delete'), { button: true, remote: true }, { aligned: true, fixed: false, bigger: true }
+
+    - if event.event_collection
+      .clear-fix{ style: 'margin-top: 5px; margin-bottom: 5px;' }
+      = link_to_delete polymorphic_path([event.eventable.owner, event.eventable, event], delete_options: 'delete_all'), { label: Event.human_attribute_name('delete_all'), button: true, remote: true }, { aligned: true, fixed: false, bigger: true }
+      = link_to_delete polymorphic_path([event.eventable.owner, event.eventable, event], delete_options: 'delete_following'), { label: Event.human_attribute_name('delete_following'), button: true, remote: true }, { aligned: true, fixed: false, bigger: true }
+
+:coffee
+  $('#event_color').minicolors theme: 'bootstrap'
+  $("input[data-role=tagsinput], select[multiple][data-role=tagsinput]").tagsinput()
+
+- if request.xhr?
+  :coffee
+    $('.bootstrap-tagsinput').css('display', 'block')

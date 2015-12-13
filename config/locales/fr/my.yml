@@ -1,0 +1,8 @@
+fr:
+  my:
+    account:
+      title: Mon compte
+      api_key: Clé d'accès API
+      notice: Informations mises à jour avec succès
+      error: Erreurs lors de la mise à jour des informations
+      change_password: Changer de mot de passe

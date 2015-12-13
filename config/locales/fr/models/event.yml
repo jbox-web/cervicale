@@ -1,0 +1,60 @@
+fr:
+
+  activerecord:
+    models:
+      event:
+        one: Evènement
+        other: Evènements
+
+    attributes:
+      event:
+        title: Titre
+        empty_title: Sans titre
+        description: Description
+        location: Lieu
+        color: Couleur
+        category_list: Catégories
+        start_time: Date de début
+        end_time: Date de fin
+        all_day: Evènement sur toute la journée?
+        repetition: Répétition
+        frequency: Fréquence
+        repeat_until: Jusqu'à
+        author: Auteur
+        update_options: Options de mise à jour
+        created_at: Créé le
+        updated_at: Modifé le
+
+        visibility: Confidentialité
+        public: Evènement Public
+        private: Evènement Privé
+        confidential: Evènement Confidentiel (N'afficher que la date et l'heure)
+
+        update: Modifier seulement cette occurrence
+        update_all: Modifier toute la série
+        update_following: Modifier les événements futurs
+
+        delete: Supprimer seulement cette occurrence
+        delete_all: Supprimer toute la série
+        delete_following: Supprimer les événements futurs
+
+        no_repeat: Jamais
+        repeat_days: Quotidienne
+        repeat_weeks: Hebdomadaire
+        repeat_months: Mensuelle
+        repeat_years: Annuelle
+
+    errors:
+      models:
+        event:
+          attributes:
+            base:
+              invalid: La date de début doit être inférieure à la date de fin
+            title:
+              blank: ne peut être vide
+            description:
+              blank: ne peut être vide
+            start_time:
+              blank: ne peut être vide
+            end_time:
+              blank: ne peut être vide

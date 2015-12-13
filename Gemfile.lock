@@ -1,0 +1,494 @@
+GIT
+  remote: https://github.com/jbox-web/easy-app.git
+  revision: dc42a9d9355b8cbae599f1b5ab29603791af4556
+  specs:
+    easy-app (1.0.0)
+      ajax-datatables-rails
+      autoprefixer-rails
+      bootstrap-sass
+      bootstrap-switch-rails
+      bootstrap-tagsinput-rails
+      bootstrap_form
+      coffee-rails
+      crummy
+      date_validator
+      faker
+      font-awesome-rails
+      fullcalendar-rails
+      google-webfonts-rails
+      haml-rails
+      html-pipeline
+      html5shiv-js-rails
+      jbuilder
+      jquery-minicolors-rails
+      jquery-rails
+      jquery-ui-rails
+      momentjs-rails
+      mysql2
+      nested_form
+      nokogiri
+      pg
+      pg_search
+      premailer-rails
+      puma
+      pygments.rb
+      rack-mini-profiler
+      rails (~> 4.2, >= 4.2.5)
+      rails-bootstrap-markdown
+      rails-jquery-autocomplete
+      rails_bootstrap_navbar
+      redcarpet
+      respond-js-rails
+      rinku
+      sass-rails
+      select2-rails
+      settingslogic
+      simple-navigation
+      simple_navigation_renderers
+      smart_listing
+      task_list
+      themes_on_rails
+      turbolinks
+      uglifier
+      zeroclipboard-rails
+
+GIT
+  remote: https://github.com/jbox-web/easy-crud.git
+  revision: 37e4e0b9cf6ce3d211f4ecfa5135d5b09c478804
+  specs:
+    easy-crud (1.0.0)
+
+GIT
+  remote: https://github.com/jbox-web/easy-dci.git
+  revision: f9a1d95939d5621d2f6ae8b92d54171b4b2548d8
+  specs:
+    easy-dci (1.0.0)
+
+GIT
+  remote: https://github.com/n-rodriguez/simple_navigation_renderers.git
+  revision: abfac34b784b859da8f6a245ccffbba1437978f6
+  branch: metis_menu
+  specs:
+    simple_navigation_renderers (1.0.2)
+      simple-navigation (~> 4.0)
+
+GIT
+  remote: https://github.com/rails/actionform.git
+  revision: fe9ed888bbee5804f250e77b798972e47f780656
+  specs:
+    actionform (0.0.1)
+      rails (~> 4.1)
+
+GIT
+  remote: https://github.com/yoolk/themes_on_rails.git
+  revision: 3243b758e8250602ee1ae702a135759d3b7a280c
+  specs:
+    themes_on_rails (0.3.0)
+      rails (>= 3.2)
+
+GEM
+  remote: https://rubygems.org/
+  remote: https://rails-assets.org/
+  specs:
+    actionmailer (4.2.5)
+      actionpack (= 4.2.5)
+      actionview (= 4.2.5)
+      activejob (= 4.2.5)
+      mail (~> 2.5, >= 2.5.4)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+    actionpack (4.2.5)
+      actionview (= 4.2.5)
+      activesupport (= 4.2.5)
+      rack (~> 1.6)
+      rack-test (~> 0.6.2)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+      rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    actionview (4.2.5)
+      activesupport (= 4.2.5)
+      builder (~> 3.1)
+      erubis (~> 2.7.0)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+      rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    activejob (4.2.5)
+      activesupport (= 4.2.5)
+      globalid (>= 0.3.0)
+    activemodel (4.2.5)
+      activesupport (= 4.2.5)
+      builder (~> 3.1)
+    activerecord (4.2.5)
+      activemodel (= 4.2.5)
+      activesupport (= 4.2.5)
+      arel (~> 6.0)
+    activerecord-session_store (0.1.2)
+      actionpack (>= 4.0.0, < 5)
+      activerecord (>= 4.0.0, < 5)
+      railties (>= 4.0.0, < 5)
+    activesupport (4.2.5)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    acts-as-taggable-on (3.5.0)
+      activerecord (>= 3.2, < 5)
+    addressable (2.4.0)
+    ajax-datatables-rails (0.3.1)
+      railties (>= 3.1)
+    arel (6.0.3)
+    autoprefixer-rails (6.1.2)
+      execjs
+      json
+    bcrypt (3.1.10)
+    bootstrap-navbar (2.2.4)
+      gem_config (~> 0.3)
+    bootstrap-sass (3.3.6)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
+    bootstrap-switch-rails (3.3.3)
+    bootstrap-tagsinput-rails (0.4.2.1)
+      railties (>= 3.1)
+    bootstrap_form (2.3.0)
+    builder (3.2.2)
+    bullet (4.14.10)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.9.0)
+    capybara (2.5.0)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+    coffee-rails (4.1.0)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0, < 5.0)
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.10.0)
+    concurrent-ruby (1.0.0)
+    crummy (1.8.0)
+    css_parser (1.3.7)
+      addressable
+    database_cleaner (1.5.1)
+    date_validator (0.8.1)
+      activemodel
+    dav4rack (0.3.0)
+      nokogiri (>= 1.4.2)
+      rack (>= 1.1.0)
+      uuidtools (~> 2.1.1)
+    devise (3.5.3)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
+    devise_invitable (1.5.3)
+      actionmailer (>= 3.2.6, < 5)
+      devise (>= 3.2.0)
+    diff-lcs (1.2.5)
+    docile (1.1.5)
+    dotenv (2.0.2)
+    dotenv-rails (2.0.2)
+      dotenv (= 2.0.2)
+      railties (~> 4.0)
+    erubis (2.7.0)
+    execjs (2.6.0)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
+    faker (1.6.1)
+      i18n (~> 0.5)
+    figaro (1.1.1)
+      thor (~> 0.14)
+    flog (4.3.2)
+      ruby_parser (~> 3.1, > 3.1.0)
+      sexp_processor (~> 4.4)
+    font-awesome-rails (4.5.0.0)
+      railties (>= 3.2, < 5.0)
+    fullcalendar-rails (2.5.0.0)
+      jquery-rails (>= 4.0.5, < 5.0.0)
+      jquery-ui-rails (>= 5.0.2)
+      momentjs-rails (>= 2.9.0)
+    gem_config (0.3.1)
+    globalid (0.3.6)
+      activesupport (>= 4.1.0)
+    google-webfonts-rails (0.0.4)
+      activesupport (> 3.2.0, < 5.0)
+    haml (4.0.7)
+      tilt
+    haml-rails (0.9.0)
+      actionpack (>= 4.0.1)
+      activesupport (>= 4.0.1)
+      haml (>= 4.0.6, < 5.0)
+      html2haml (>= 1.0.1)
+      railties (>= 4.0.1)
+    html-pipeline (2.2.2)
+      activesupport (>= 2, < 5)
+      nokogiri (>= 1.4)
+    html2haml (2.0.0)
+      erubis (~> 2.7.0)
+      haml (~> 4.0.0)
+      nokogiri (~> 1.6.0)
+      ruby_parser (~> 3.5)
+    html5shiv-js-rails (3.7.3)
+      railties (~> 4.0, < 5.0)
+    htmlentities (4.3.4)
+    i18n (0.7.0)
+    icalendar (2.3.0)
+    jbuilder (2.3.2)
+      activesupport (>= 3.0.0, < 5)
+      multi_json (~> 1.2)
+    jquery-minicolors-rails (2.1.4.0)
+      jquery-rails
+      rails (>= 3.2.8)
+    jquery-rails (4.0.5)
+      rails-dom-testing (~> 1.0)
+      railties (>= 4.2.0)
+      thor (>= 0.14, < 2.0)
+    jquery-ui-rails (5.0.5)
+      railties (>= 3.2.16)
+    json (1.8.3)
+    kaminari (0.16.3)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    letter_opener (1.4.1)
+      launchy (~> 2.2)
+    letter_opener_web (1.2.3)
+      letter_opener (~> 1.0)
+      rails (>= 3.2)
+    loofah (2.0.3)
+      nokogiri (>= 1.5.9)
+    mail (2.6.3)
+      mime-types (>= 1.16, < 3)
+    mime-types (2.99)
+    mina (0.3.7)
+      open4 (~> 1.3.4)
+      rake
+    mina-puma (0.2.0)
+      mina
+    mina-scp (0.1.2)
+    mina-sidekiq (0.3.1)
+      mina
+    mini_portile2 (2.0.0)
+    minitest (5.8.3)
+    momentjs-rails (2.10.6)
+      railties (>= 3.1)
+    multi_json (1.11.2)
+    mysql2 (0.4.2)
+    nested_form (0.3.2)
+    nokogiri (1.6.7)
+      mini_portile2 (~> 2.0.0.rc2)
+    open4 (1.3.4)
+    orm_adapter (0.5.0)
+    pg (0.18.4)
+    pg_search (1.0.5)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
+    posix-spawn (0.3.11)
+    premailer (1.8.6)
+      css_parser (>= 1.3.6)
+      htmlentities (>= 4.0.0)
+    premailer-rails (1.8.2)
+      actionmailer (>= 3, < 5)
+      premailer (~> 1.7, >= 1.7.9)
+    puma (2.15.3)
+    pundit (1.0.1)
+      activesupport (>= 3.0.0)
+    pygments.rb (0.6.3)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.2.0)
+    quiet_assets (1.1.0)
+      railties (>= 3.1, < 5.0)
+    rack (1.6.4)
+    rack-mini-profiler (0.9.8)
+      rack (>= 1.1.3)
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    rails (4.2.5)
+      actionmailer (= 4.2.5)
+      actionpack (= 4.2.5)
+      actionview (= 4.2.5)
+      activejob (= 4.2.5)
+      activemodel (= 4.2.5)
+      activerecord (= 4.2.5)
+      activesupport (= 4.2.5)
+      bundler (>= 1.3.0, < 2.0)
+      railties (= 4.2.5)
+      sprockets-rails
+    rails-assets-datetimepicker (2.4.5)
+      rails-assets-jquery (>= 1.7.2)
+    rails-assets-jquery (2.1.4)
+    rails-bootstrap-markdown (2.6.0)
+    rails-deprecated_sanitizer (1.0.3)
+      activesupport (>= 4.2.0.alpha)
+    rails-dom-testing (1.0.7)
+      activesupport (>= 4.2.0.beta, < 5.0)
+      nokogiri (~> 1.6.0)
+      rails-deprecated_sanitizer (>= 1.0.1)
+    rails-html-sanitizer (1.0.2)
+      loofah (~> 2.0)
+    rails-jquery-autocomplete (1.0.3)
+      rails (>= 3.2)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_bootstrap_navbar (2.0.1)
+      bootstrap-navbar (~> 2.0)
+      rails (>= 3.0.0)
+    rails_serve_static_assets (0.0.4)
+    rails_stdout_logging (0.0.4)
+    railties (4.2.5)
+      actionpack (= 4.2.5)
+      activesupport (= 4.2.5)
+      rake (>= 0.8.7)
+      thor (>= 0.18.1, < 2.0)
+    rake (10.4.2)
+    redcarpet (3.3.3)
+    request_store (1.2.1)
+    respond-js-rails (1.4.2.1)
+      railties (~> 4.0, < 5.0)
+    responders (2.1.0)
+      railties (>= 4.2.0, < 5)
+    rinku (1.7.3)
+    rspec (3.3.0)
+      rspec-core (~> 3.3.0)
+      rspec-expectations (~> 3.3.0)
+      rspec-mocks (~> 3.3.0)
+    rspec-core (3.3.2)
+      rspec-support (~> 3.3.0)
+    rspec-expectations (3.3.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-mocks (3.3.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-rails (3.3.3)
+      actionpack (>= 3.0, < 4.3)
+      activesupport (>= 3.0, < 4.3)
+      railties (>= 3.0, < 4.3)
+      rspec-core (~> 3.3.0)
+      rspec-expectations (~> 3.3.0)
+      rspec-mocks (~> 3.3.0)
+      rspec-support (~> 3.3.0)
+    rspec-support (3.3.0)
+    ruby_parser (3.7.2)
+      sexp_processor (~> 4.1)
+    sass (3.4.20)
+    sass-rails (5.0.4)
+      railties (>= 4.0.0, < 5.0)
+      sass (~> 3.1)
+      sprockets (>= 2.8, < 4.0)
+      sprockets-rails (>= 2.0, < 4.0)
+      tilt (>= 1.1, < 3)
+    select2-rails (4.0.0)
+      thor (~> 0.14)
+    settingslogic (2.0.9)
+    sexp_processor (4.6.0)
+    shoulda (3.5.0)
+      shoulda-context (~> 1.0, >= 1.0.1)
+      shoulda-matchers (>= 1.4.1, < 3.0)
+    shoulda-context (1.2.1)
+    shoulda-matchers (2.8.0)
+      activesupport (>= 3.0.0)
+    simple-navigation (4.0.3)
+      activesupport (>= 2.3.2)
+    simplecov (0.10.0)
+      docile (~> 1.1.0)
+      json (~> 1.8)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.0)
+    smart_listing (1.1.2)
+      coffee-rails
+      jquery-rails
+      kaminari (~> 0.16.1)
+      rails (>= 3.2)
+    spring (1.4.4)
+    spring-commands-rspec (1.0.4)
+      spring (>= 0.9.1)
+    sprockets (3.5.2)
+      concurrent-ruby (~> 1.0)
+      rack (> 1, < 3)
+    sprockets-rails (2.3.3)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      sprockets (>= 2.8, < 4.0)
+    task_list (1.0.2)
+      html-pipeline
+    thor (0.19.1)
+    thread_safe (0.3.5)
+    tilt (2.0.1)
+    turbolinks (2.5.3)
+      coffee-rails
+    turbulence (1.2.4)
+      flog (~> 4.1)
+      json (>= 1.4.6)
+      launchy (>= 2.0.0)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+    uglifier (2.7.2)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
+    uniform_notifier (1.9.0)
+    uuidtools (2.1.5)
+    warden (1.2.4)
+      rack (>= 1.0)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
+    yajl-ruby (1.2.1)
+    zeroclipboard-rails (0.1.1)
+      railties (>= 3.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  actionform (~> 0.0.1)!
+  activerecord-session_store
+  acts-as-taggable-on (~> 3.4)
+  bcrypt
+  bullet (~> 4.14.10)
+  bundler (>= 1.8.4)
+  capybara (~> 2.5.0)
+  database_cleaner (~> 1.5.0)
+  dav4rack
+  devise
+  devise_invitable
+  dotenv-rails (~> 2.0.2)
+  easy-app!
+  easy-crud!
+  easy-dci!
+  factory_girl (~> 4.5.0)
+  factory_girl_rails (~> 4.5.0)
+  figaro (~> 1.1.0)
+  flog (~> 4.3.0)
+  icalendar
+  letter_opener_web (~> 1.2.0)
+  mina (~> 0.3.4)
+  mina-puma
+  mina-scp
+  mina-sidekiq
+  pundit
+  quiet_assets (~> 1.1.0)
+  rails-assets-datetimepicker!
+  rails_12factor
+  request_store
+  rspec (~> 3.3.0)
+  rspec-rails (~> 3.3.0)
+  shoulda (~> 3.5.0)
+  shoulda-context (~> 1.2.1)
+  shoulda-matchers (~> 2.8.0)
+  simple_navigation_renderers (~> 1.0.2)!
+  simplecov (~> 0.10.0)
+  spring (~> 1.4.0)
+  spring-commands-rspec (~> 1.0.4)
+  themes_on_rails!
+  turbulence (~> 1.2.4)
+
+BUNDLED WITH
+   1.10.6

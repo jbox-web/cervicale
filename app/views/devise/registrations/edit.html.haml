@@ -1,0 +1,15 @@
+- html_title t('.change_password')
+
+%h1{ class: 'page-header' }= label_with_icon(t('.change_password'), 'fa-lock', fixed: true, bigger: false)
+
+= bootstrap_form_for resource,
+                     layout: :horizontal, label_col: 'col-sm-3 col-md-2 col-lg-2', control_col: 'col-sm-5 col-md-4 col-lg-3',
+                     url:    user_registration_path,
+                     html:   { method: :patch } do |f|
+
+  = f.password_field :current_password, autocomplete: 'off'
+  = f.password_field :password, autocomplete: 'off'
+  = f.password_field :password_confirmation, autocomplete: 'off'
+
+  = f.form_group control_col: 'col-sm-3 col-sm-offset-3 col-md-offset-2' do
+    = f.success

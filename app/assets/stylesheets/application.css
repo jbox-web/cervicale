@@ -1,0 +1,75 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require easy_app
+ *= require datetimepicker
+ *= require_self
+ */
+
+.breadcrumb-without-background {
+  background-color: #fff;
+  padding: 0 15px;
+  margin-bottom: 0;
+}
+
+.page-header {
+  margin: 0 0 20px;
+}
+
+.flash-messages {
+  padding-top: 20px;
+}
+
+.form-group .control-label.required:after {
+  content: ' *';
+  color: #a94442;
+  font-size: 16px;
+}
+
+.yadcf-filter-wrapper {
+  display: block;
+  margin-left: 0px;
+}
+
+.dataTables_length {
+  display: inline;
+}
+
+ul, ol {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.table tbody > tr > td.vert-align {
+  vertical-align: middle;
+}
+
+.vert-align .form-group {
+  margin-bottom: 0px;
+}
+
+.dl-horizontal dd {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media(max-width:540px){
+  .hide-on-small {
+    display: none;
+  }
+}
+
+@media(max-width:767px){
+  h1 {
+    font-size: 25px;
+  }
+}

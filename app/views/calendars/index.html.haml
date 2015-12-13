@@ -1,0 +1,18 @@
+- set_html_title(icon: 'fa-envelope')
+
+= render_breadcrumbs(tag: :h2, tag_opts: { class: 'page-header' }, crumb_opts: { ul_class: 'breadcrumb breadcrumb-without-background' })
+
+.row
+  .col-md-12
+    %fieldset
+      %legend
+        = t('.my_calendars')
+        .pull-right
+          = link_to_add new_user_calendar_path, { label: false, modal: true, data: { modal_size: 'lg', draggable: false } }, { bigger: false } if policy(@user).create_calendar?
+      = smart_listing_render(:my_calendars)
+
+.row
+  .col-md-12
+    %fieldset
+      %legend= t('.my_memberships')
+      = smart_listing_render(:my_memberships)

@@ -1,0 +1,13 @@
+fr:
+
+  events:
+    new_form:
+      title: Nouvel événement
+      add_attachment: Ajouter un lien
+    edit_form:
+      title: Modifier l'événement
+      add_attachment: Ajouter un lien
+    listing:
+      none_defined: Aucun événement trouvé
+    show:
+      title: Evénement

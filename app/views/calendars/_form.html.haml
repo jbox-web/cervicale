@@ -1,0 +1,29 @@
+= render_breadcrumbs(tag: :h1, tag_opts: { class: 'page-header' }, crumb_opts: { ul_class: 'breadcrumb breadcrumb-without-background' })
+
+= dci_form_for [object.owner, object], nested: true, label_col: 'col-sm-3 col-lg-4', control_col: 'col-sm-5 col-md-4 col-lg-5' do |f|
+
+  = f.text_field :name
+  = f.text_area  :description
+  = f.text_field :color
+
+  = f.form_group do
+    %table{ class: 'table table-hover', id: 'members_list' }
+      %thead
+        %tr
+          %th= Calendar.human_attribute_name('members')
+          %th= Calendar.human_attribute_name('permissions')
+          %th= f.link_to_add label_with_icon(t('.add_member'), 'fa-plus', fixed: true), :calendars_users, data: { target: "#members_list" }
+
+      %tbody
+        = f.fields_for :calendars_users, wrapper: false do |ff|
+          %tr{ class: 'fields' }
+            %td{ class: 'vert-align' }= ff.collection_select :user_id, User.available_for_membership, :id, :full_name, hide_label: true, control_col: 'col-md-12'
+            %td{ class: 'vert-align' }= ff.collection_select :permissions, Calendar.available_permissions, :first, :last, hide_label: true, control_col: 'col-md-12'
+            %td{ class: 'vert-align' }= ff.link_to_remove icon('fa-trash-o')
+
+  = f.form_group do
+    = f.success
+    = f.cancel user_calendars_path(User.current) unless request.xhr?
+
+:coffee
+  $('#calendar_color').minicolors theme: 'bootstrap'

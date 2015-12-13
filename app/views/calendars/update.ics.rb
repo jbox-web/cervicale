@@ -1,0 +1,1 @@
+IcsExporter.new(@calendar).export!

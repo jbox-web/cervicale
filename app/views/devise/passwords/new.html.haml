@@ -1,0 +1,15 @@
+- html_title t('.title')
+
+.container-fluid
+  .row-fluid
+    %div{ class: 'col-sm-5 col-sm-offset-4 col-md-4 col-md-offset-4' }
+
+      %h3{ class: 'page-header' }= label_with_icon(t('.title'), 'fa-envelope', fixed: true, bigger: false)
+
+      = bootstrap_form_for resource,
+                           as:   resource_name,
+                           url:  password_path(resource_name),
+                           html: { method: :post } do |f|
+
+        = f.email_field :email, autofocus: true, prepend: button_with_icon('fa-at'), label: t('.enter_email')
+        = f.submit t('.reset_password_instructions'), class: 'btn btn-primary'

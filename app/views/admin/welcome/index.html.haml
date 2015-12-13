@@ -1,0 +1,4 @@
+- set_html_title(icon: 'fa-gear')
+
+- add_crumb label_with_icon t('text.admin'), 'fa-gear', fixed: true, bigger: false
+= render_breadcrumbs(tag: :h1, tag_opts: { class: 'page-header' }, crumb_opts: { ul_class: 'breadcrumb breadcrumb-without-background' })

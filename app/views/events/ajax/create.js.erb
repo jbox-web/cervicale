@@ -1,0 +1,7 @@
+<% if saved %>
+$('#modal-holder').find('.modal').modal('hide');
+$('#calendar').fullCalendar('refetchEvents');
+<%= smart_listing_update(:events) %>
+<% else %>
+<%= js_render_partial('#event_form', 'events/new_form', method: :replace, locals: { eventable: eventable, event: event }) %>
+<% end %>
