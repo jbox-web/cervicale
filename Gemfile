@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.3'
+ruby '2.3.0'
 
 gem 'easy-app',  git: 'https://github.com/jbox-web/easy-app.git'
 gem 'easy-crud', git: 'https://github.com/jbox-web/easy-crud.git'
@@ -11,8 +11,8 @@ gem 'simple_navigation_renderers', '~> 1.0.2', git: 'https://github.com/n-rodrig
 gem 'bundler', '>= 1.8.4'
 
 # Configuration
-gem 'dotenv-rails',  '~> 2.0.2'
-gem 'figaro',        '~> 1.1.0'
+gem 'dotenv-rails'
+gem 'figaro'
 
 # Authentication
 gem 'bcrypt'
@@ -22,15 +22,10 @@ gem 'request_store'
 gem 'activerecord-session_store'
 
 # Themes
-gem 'themes_on_rails', git: 'https://github.com/yoolk/themes_on_rails.git'
+gem 'themes_on_rails'
 
 # Deployment (DeployIt / Heroku)
 gem 'rails_12factor', group: :production
-
-# JQuery DateTime Picker
-source 'https://rails-assets.org' do
-  gem 'rails-assets-datetimepicker'
-end
 
 # Base for Calendar management
 gem 'dav4rack'
