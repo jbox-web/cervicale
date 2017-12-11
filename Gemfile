@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.3.1'
+ruby '2.3.5'
 
 gem 'easy-app',   git: 'https://github.com/jbox-web/easy-app.git'
 gem 'easy-crud',  git: 'https://github.com/jbox-web/easy-crud.git'
